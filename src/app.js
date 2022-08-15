@@ -22,5 +22,9 @@ window.onload = function() {
       }
     }
   }
-  h1.innerHTML = domainNameArr;
+  domainNameArr.forEach((domain, index) => {
+    const newP = document.createElement("p");
+    newP.innerHTML = domain;
+    document.body.appendChild(newP);
+  });
 };
